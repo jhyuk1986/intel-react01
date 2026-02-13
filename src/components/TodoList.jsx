@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 const todoList = [
-  { id: 1, task: "첫번째할일", isDone: false },
+  { id: 1, task: "첫번째할일!", isDone: false },
   { id: 2, task: "두번째할일", isDone: true },
   { id: 3, task: "세번째할일", isDone: false },
 ];
