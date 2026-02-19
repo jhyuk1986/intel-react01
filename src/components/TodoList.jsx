@@ -9,7 +9,7 @@ const todoList = [
 
 function TodoItem({ todo, isDoneToggle, deleteTodo }) {
   return (
-    <li className={todo.isDone ? "completed" : ""}>
+    <li className={todo.isDone ? "todolist-completed" : ""}>
       <input
         type="checkbox"
         defaultChecked={todo.isDone}
@@ -71,9 +71,9 @@ function TodoList() {
   }, [todos]);
 
   return (
-    <div className="container">
+    <div className="todolist-container">
       <h1>📝 Todo List</h1>
-      <div className="input-box">
+      <div className="todolist-input-box">
         <input
           type="text"
           placeholder="할 일을 입력하세요"
@@ -89,7 +89,7 @@ function TodoList() {
         />
         <button onClick={addTodo}>추가</button>
       </div>
-      <ul className="todo-list">
+      <ul className="todolist-todo-list">
         {/* 투두리스트 비어있으면 멘트 출력 */}
         {todos.length === 0 ? (
           <p className="empty-message">

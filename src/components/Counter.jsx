@@ -7,19 +7,21 @@ function Counter() {
   const min = -5;
 
   return (
-    <div className="counter">
+    <div className="counter-container">
       <h1
-        className={`count ${count > 0 ? "positive" : count < 0 ? "negative" : ""}`}
+        className={`counter-count ${count > 0 ? "counter-positive" : count < 0 ? "counter-negative" : ""}`}
       >
         {count}
       </h1>
-      <div className="buttons">
+      <div className="counter-buttons">
         <button
           onClick={() => {
             setCount(count - 1);
           }}
           disabled={count <= min}
-        ></button>
+        >
+          -
+        </button>
         <button
           onClick={() => {
             setCount(0);
